@@ -9,7 +9,7 @@ public class Test {
         Figure blackKing = new Figure(scanner.nextInt(), scanner.nextInt());
         Figure whiteKing = new Figure(scanner.nextInt(), scanner.nextInt());
         Figure whiteQueen = new Figure(scanner.nextInt(), scanner.nextInt());
-        Figure whiteElephant = new Figure(scanner.nextInt(), scanner.nextInt());
+        Figure whiteBishop = new Figure(scanner.nextInt(), scanner.nextInt());
         Figure whiteHorse = new Figure(scanner.nextInt(), scanner.nextInt());
 
         boolean whetherThereIsAMate;
