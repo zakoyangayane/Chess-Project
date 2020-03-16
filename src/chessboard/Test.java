@@ -41,12 +41,20 @@ public class Test {
 
         /*check for the place of white queen,
          * not to be on the diagonals, verticals and horizontals of the black king*/
+        //vertical and horizontal
         if (whiteQueen.y == blackKingY || whiteQueen.x == blackKingX) {
             return true;
         }
+        /*check for the place of both queen and white bishop,
+         * not to be on the diagonals of the black king*/
+        //diagonal
         for (int i = 1; i < blackKingX; i++) {
             if (whiteQueen.x == blackKingX - i &&
                     (whiteQueen.y == blackKingY - i || whiteQueen.y == blackKingY + i)) {
+                return true;
+            }
+            if (whiteBishop.x == blackKingX - i &&
+                    (whiteBishop.y == blackKingY - i || whiteBishop.y == blackKingY + i)) {
                 return true;
             }
         }
@@ -55,8 +63,24 @@ public class Test {
                     (whiteQueen.y == blackKingY - i || whiteQueen.y == blackKingY + i)) {
                 return true;
             }
+            if (whiteBishop.x == blackKingX + i &&
+                    (whiteBishop.y == blackKingY - i || whiteBishop.y == blackKingY + i)) {
+                return true;
+            }
         }
 
+        /*check for place of knight,
+         * not to be on the places drawn with Г from the black king*/
+        for (int i = 1, j = 2; i < 3; i++, j--) {
+            if (whiteKnight.x == blackKingX - j &&
+                    (whiteKnight.y == blackKingY - i || whiteKnight.y == blackKingY + i)) {
+                return true;
+            }
+            if (whiteKnight.x == blackKingX + j &&
+                    (whiteKnight.y == blackKingY - i || whiteKnight.y == blackKingY + i)) {
+                return true;
+            }
+        }
 
         return false;
     }
