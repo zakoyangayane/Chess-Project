@@ -6,21 +6,28 @@ public class Test {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("8: - - - - - - - -");
+        System.out.println("7: - - - - - - - -");
+        System.out.println("6: - - - - - - - -");
+        System.out.println("5: - - - - - - - -");
+        System.out.println("4: - - - - - - - -");
+        System.out.println("3: - - - - - - - -");
+        System.out.println("2: - - - - - - - -");
+        System.out.println("1: - - - - - - - -");
+        System.out.println("   1 2 3 4 5 6 7 8");
+        System.out.println();
+
         System.out.print("Black king: ");
         Figure blackKing = new Figure(scanner.nextInt(), scanner.nextInt());
-        System.out.println();
 
         System.out.print("White king: ");
         Figure whiteKing = new Figure(scanner.nextInt(), scanner.nextInt());
-        System.out.println();
 
         System.out.print("White queen: ");
         Figure whiteQueen = new Figure(scanner.nextInt(), scanner.nextInt());
-        System.out.println();
 
         System.out.print("White bishop: ");
         Figure whiteBishop = new Figure(scanner.nextInt(), scanner.nextInt());
-        System.out.println();
 
         System.out.print("White knight: ");
         Figure whiteKnight = new Figure(scanner.nextInt(), scanner.nextInt());
@@ -47,7 +54,7 @@ public class Test {
 
         /*check for the place of white king,
          * not to be near the black king*/
-        for (int i = blackKingX - 1; i < blackKingX + 2; i++) {
+        for (int i = blackKingX - 1; i < blackKingX + 2 && i < 9 && i > 0; i++) {
             if (whiteKing.y == blackKingY - 1 || whiteKing.y == blackKingY || whiteKing.y == blackKingY + 1) {
                 return true;
             }
