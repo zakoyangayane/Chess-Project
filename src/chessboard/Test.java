@@ -12,8 +12,8 @@ public class Test {
         Figure whiteBishop = new Figure(scanner.nextInt(), scanner.nextInt());
         Figure whiteKnight = new Figure(scanner.nextInt(), scanner.nextInt());
 
-        boolean whetherThereIsAMate;
-
+        System.out.println(checkForAMate(blackKing, whiteKing, whiteQueen, whiteBishop, whiteKnight)
+                ? "there is a checkmate" : "there isn't a checkmate");
 
     }
 
@@ -31,14 +31,31 @@ public class Test {
         final int blackKingX = blackKing.x;
         final int blackKingY = blackKing.y;
 
-        /*check for the place of white king*/
+        /*check for the place of white king,
+         * not to be near the black king*/
         for (int i = blackKingX - 1; i < blackKingX + 2; i++) {
             if (whiteKing.y == blackKingY - 1 || whiteKing.y == blackKingY || whiteKing.y == blackKingY + 1) {
                 return true;
             }
         }
 
-        /*check for the place of white queen*/
+        /*check for the place of white queen,
+         * not to be on the diagonals, verticals and horizontals of the black king*/
+        if (whiteQueen.y == blackKingY || whiteQueen.x == blackKingX) {
+            return true;
+        }
+        for (int i = 1; i < blackKingX; i++) {
+            if (whiteQueen.x == blackKingX - i &&
+                    (whiteQueen.y == blackKingY - i || whiteQueen.y == blackKingY + i)) {
+                return true;
+            }
+        }
+        for (int i = 1; i < 9 - blackKingX; i++) {
+            if (whiteQueen.x == blackKingX + i &&
+                    (whiteQueen.y == blackKingY - i || whiteQueen.y == blackKingY + i)) {
+                return true;
+            }
+        }
 
 
         return false;
