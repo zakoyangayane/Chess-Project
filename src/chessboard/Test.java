@@ -6,15 +6,15 @@ public class Test {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("8: - - - - - - - -");
-        System.out.println("7: - - - - - - - -");
-        System.out.println("6: - - - - - - - -");
-        System.out.println("5: - - - - - - - -");
-        System.out.println("4: - - - - - - - -");
-        System.out.println("3: - - - - - - - -");
-        System.out.println("2: - - - - - - - -");
-        System.out.println("1: - - - - - - - -");
-        System.out.println("   1 2 3 4 5 6 7 8");
+        System.out.println("8  -  -  -  -  -  -  -  -");
+        System.out.println("7  -  -  -  -  -  -  -  -");
+        System.out.println("6  -  -  -  -  -  -  -  -");
+        System.out.println("5  -  -  -  -  -  -  -  -");
+        System.out.println("4  -  -  -  -  -  -  -  -");
+        System.out.println("3  -  -  -  -  -  -  -  -");
+        System.out.println("2  -  -  -  -  -  -  -  -");
+        System.out.println("1  -  -  -  -  -  -  -  -");
+        System.out.println("   1  2  3  4  5  6  7  8");
         System.out.println();
 
         System.out.print("Black king: ");
