@@ -5,8 +5,16 @@ import java.util.Objects;
 import java.util.Set;
 
 public class Figure {
+
+    /**
+     * the coordinates of the figure
+     */
     int x;
     int y;
+
+    /**
+     * keep all figures here to filter the duplicates
+     */
     public static Set<Figure> figureSet = new LinkedHashSet<>();
 
     public Figure(int x, int y) {
