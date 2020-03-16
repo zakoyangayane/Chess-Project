@@ -53,7 +53,7 @@ public class Test {
         final int blackKingY = blackKing.y;
 
         /*check for the place of white king,
-         * not to be near the black king*/
+         * not to be near the black king, the 8 squares*/
         for (int i = blackKingX - 1; i < blackKingX + 2 && i < 9 && i > 0; i++) {
             if (whiteKing.y == blackKingY - 1 || whiteKing.y == blackKingY || whiteKing.y == blackKingY + 1) {
                 return true;
@@ -90,8 +90,8 @@ public class Test {
             }
         }
 
-        /*check for place of knight,
-         * not to be on the places drawn with Г from the black king*/
+        /*check for the place of knight,
+         * not to be on the places drawn with Г form from the black king*/
         for (int i = 1, j = 2; i < 3; i++, j--) {
             if (whiteKnight.x == blackKingX - j &&
                     (whiteKnight.y == blackKingY - i || whiteKnight.y == blackKingY + i)) {
