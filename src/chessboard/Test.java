@@ -6,11 +6,25 @@ public class Test {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.print("Black king: ");
         Figure blackKing = new Figure(scanner.nextInt(), scanner.nextInt());
+        System.out.println();
+
+        System.out.print("White king: ");
         Figure whiteKing = new Figure(scanner.nextInt(), scanner.nextInt());
+        System.out.println();
+
+        System.out.print("White queen: ");
         Figure whiteQueen = new Figure(scanner.nextInt(), scanner.nextInt());
+        System.out.println();
+
+        System.out.print("White bishop: ");
         Figure whiteBishop = new Figure(scanner.nextInt(), scanner.nextInt());
+        System.out.println();
+
+        System.out.print("White knight: ");
         Figure whiteKnight = new Figure(scanner.nextInt(), scanner.nextInt());
+        System.out.println();
 
         System.out.println(checkForAMate(blackKing, whiteKing, whiteQueen, whiteBishop, whiteKnight)
                 ? "there is a checkmate" : "there isn't a checkmate");
